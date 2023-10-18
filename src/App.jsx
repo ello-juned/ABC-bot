@@ -1,26 +1,20 @@
-import { useState } from "react";
-import "./App.css";
-import VoiceflowChatbot from "./VoiceflowChatbot";
+import React from "react";
+import ChatBot from "./components/ChatBot";
+import Header from "./components/Header";
+import Hero from "./components/Hero";
 
 function App() {
-  const [count, setCount] = useState(0);
-
   return (
-    <>
-      <div className="w-screen h-screen flex items-center justify-center bg-black text-white">
-        <div className="p-8  shadow-2xl  justify-center items-center tx  shadow-white min-h-[60%] min-w-[50%] rounded-2xl">
-          <div className="text-center mt-4 flex flex-col items-center justify-center">
-            <p className="text-lg font-semibold">Property for Sale or Rent</p>
-            <p className="text-gray-500">
-              This beautiful property is available for both sale and rent. It
-              features spacious rooms, a stunning view, and a convenient
-              location.
-            </p>
-          </div>
-        </div>
-      </div>
-      <VoiceflowChatbot />
-    </>
+    <div className="h-screen w-screen flex flex-col justify-center items-center text-center bg-black border-2 border-white rounded-3xl shadow-white shadow-2xl">
+      {/* <div className="h-1/10 m-2 bg-black shadow-xl  rounded-xl"> */}
+      {/* <Header /> */}
+      {/* </div> */}
+
+      <h3 className="text-white text-4xl  tracking-widest">abc.bot</h3>
+      {/* <Hero /> */}
+
+      <ChatBot />
+    </div>
   );
 }
 
